@@ -3,5 +3,7 @@ create table [dbo].[Registration](
     name VARCHAR(30),
     email VARCHAR(30),
     job VARCHAR(30),
+    address VARCHAR(30),
+    handphone VARCHAR(30),
     date DATE
 );

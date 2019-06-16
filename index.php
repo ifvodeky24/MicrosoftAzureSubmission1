@@ -22,6 +22,8 @@
        Nama  <input type="text" name="name" id="name"/></br></br>
        Email <input type="text" name="email" id="email"/></br></br>
        Pekerjaan <input type="text" name="job" id="job"/></br></br>
+       Alamat <input type="text" name="address" id="address"/></br></br>
+       Nomor Handphone <input type="text" name="handphone" id="handphone"/></br></br>
        <input type="submit" name="submit" value="Submit" />
        <input type="submit" name="load_data" value="Load Data" />
  </form>
@@ -48,15 +50,19 @@
             $name = $_POST['name'];
             $email = $_POST['email'];
             $job = $_POST['job'];
+            $address = $_POST['address'];
+            $handphone = $_POST['handphone'];
             $date = date("Y-m-d");
             // Insert data
-            $sql_insert = "INSERT INTO Registration (name, email, job, date) 
+            $sql_insert = "INSERT INTO Registration (name, email, job, address, handphone, date) 
                         VALUES (?,?,?,?)";
             $stmt = $conn->prepare($sql_insert);
             $stmt->bindValue(1, $name);
             $stmt->bindValue(2, $email);
             $stmt->bindValue(3, $job);
-            $stmt->bindValue(4, $date);
+            $stmt->bindValue(4, $address);
+            $stmt->bindValue(5, $handphone);
+            $stmt->bindValue(6, $date);
             $stmt->execute();
         } catch(Exception $e) {
             echo "Gagal: " . $e;
@@ -74,11 +80,15 @@
                 echo "<tr><th>Nama</th>";
                 echo "<th>Email</th>";
                 echo "<th>Pekerjaan</th>";
+                echo "<th>Alamat</th>";
+                echo "<th>No Handphone</th>";
                 echo "<th>Tanggal</th></tr>";
                 foreach($registrants as $registrant) {
                     echo "<tr><td>".$registrant['name']."</td>";
                     echo "<td>".$registrant['email']."</td>";
                     echo "<td>".$registrant['job']."</td>";
+                    echo "<td>".$registrant['address']."</td>";
+                    echo "<td>".$registrant['handphone']."</td>";
                     echo "<td>".$registrant['date']."</td></tr>";
                 }
                 echo "</table>";
