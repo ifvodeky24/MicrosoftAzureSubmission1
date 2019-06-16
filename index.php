@@ -16,7 +16,7 @@
  </style>
  </head>
  <body>
- <h1>Pendaftaran</h1>
+ <h1>Pendaftaran Pengguna IDW Project</h1>
  <p>Silahkan isi nama lengkap dan email anda, setelah itu klik <strong>Submit</strong> untuk mendaftar.</p>
  <form method="post" action="index.php" enctype="multipart/form-data" >
        Nama  <input type="text" name="name" id="name"/></br></br>
