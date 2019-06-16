@@ -26,10 +26,10 @@
        <input type="submit" name="load_data" value="Load Data" />
  </form>
  <?php
-    $host = "<idwprojectappserver.database.windows.net>";
-    $user = "<idwproject>";
-    $pass = "<01234386-idw>";
-    $db = "<idwprojectdb>";
+    $host = "idwprojectappserver.database.windows.net";
+    $user = "idwproject";
+    $pass = "01234386-idw";
+    $db = "idwprojectdb";
 
     // $host = "<Nama server database Anda>";
     // $user = "<Nama admin database Anda>";
