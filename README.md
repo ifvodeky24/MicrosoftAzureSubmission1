@@ -1,2 +1,2 @@
 # a83-macd-labs
-Source code untuk kelas Azure
+Source Code untuk Kelas Microsoft Azure Submission 1
